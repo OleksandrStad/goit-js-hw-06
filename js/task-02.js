@@ -7,32 +7,18 @@ const ingredients = [
   'Condiments',
 ];
 
-const firstItem = document.createElement('li');
-firstItem.textContent = 'Potatoes';
-firstItem.classList.add('item');
 
-const secondItem = document.createElement('li');
-secondItem.textContent = 'Mushrooms';
-secondItem.classList.add('item');
+const listIngredientsEl = document.getElementById('ingredients');
 
-const thirdItem = document.createElement('li');
-thirdItem.textContent = 'Garlic';
-thirdItem.classList.add('item')
+const itemIngredientsEl = ingredients.map((ingredient, ingredients) => {
+  let ingredientEl = document.createElement('li');
+  ingredientEl.textContent = ingredient;
+  ingredientEl.classList.add('item')
+  return ingredientEl;
 
-const fourthItem = document.createElement('li');
-fourthItem.textContent = 'Tomatos';
-fourthItem.classList.add('item');
+});
 
-const fifthItem = document.createElement('li');
-fifthItem.textContent = 'Herbs';
-fifthItem.classList.add('item');
+listIngredientsEl.append(...itemIngredientsEl)
 
-const sixthItem = document.createElement('li');
-sixthItem.textContent = 'Condiments';
-sixthItem.classList.add('item');
-
-const ingredientsEl = document.querySelector('ul');
-ingredientsEl.append(firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem);
-
-console.log(ingredientsEl);
-
+// console.log(itemIngredientsEl);
+// console.log(listIngredientsEl)

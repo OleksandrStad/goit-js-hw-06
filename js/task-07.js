@@ -2,7 +2,7 @@ const inputEl = document.getElementById('font-size-control');
 const spanEl = document.getElementById('text');
 
 
-inputEl.addEventListener('change', onChangeFont);
+inputEl.addEventListener('input', onChangeFont);
 
 function onChangeFont(event) {
 
